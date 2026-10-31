@@ -1,0 +1,38 @@
+{
+  "name": "lyricsapp",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Aprende inglés escuchando música de YouTube. Letras bilingües y sincronizadas.",
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c magenta,cyan \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:web": "vite",
+    "dev:api": "node --watch server/index.mjs",
+    "build": "tsc -b && vite build",
+    "start": "node server/index.mjs",
+    "preview": "vite preview",
+    "lint": "oxlint"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.8",
+    "express": "^5.1.0",
+    "franc-min": "^6.2.0",
+    "lucide-react": "^0.545.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.9.4"
+  },
+  "devDependencies": {
+    "@oxlint/binding-win32-x64-msvc": "^1.90.0",
+    "@rolldown/binding-win32-x64-msvc": "^1.2.16",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "concurrently": "^9.2.1",
+    "oxlint": "^1.90.0",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.5"
+  }
+}
